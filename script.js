@@ -1,8 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ... restante do seu código JavaScript
-    const tabButtons = document.querySelectorAll('.tab-button');
-    // ...
-});
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDO88AQi-1os2_2IxgT-CTKcqEVRCS3QOs",
+  authDomain: "megasena-4e96c.firebaseapp.com",
+  projectId: "megasena-4e96c",
+  storageBucket: "megasena-4e96c.firebasestorage.app",
+  messagingSenderId: "566660402717",
+  appId: "1:566660402717:web:9749c9850172c01a4040f4",
+  measurementId: "G-YXD88VECVC"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
