@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // ... restante do seu código JavaScript
+    const tabButtons = document.querySelectorAll('.tab-button');
+    // ...
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
