@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de Loterias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sorteador de Loterias</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="sorteador">Sorteador</button>
+            <button class="tab-button" data-tab="desdobramento">Desdobramento</button>
+            <button class="tab-button" data-tab="historico">Histórico</button>
+        </div>
+
+        <div id="sorteador" class="tab-content active">
+            <div class="game-selection">
+                <label for="game-type">Selecione o Jogo:</label>
+                <select id="game-type">
+                    <option value="mega-sena">Mega-Sena</option>
+                    <option value="quina">Quina</option>
+                    <option value="lotofacil">Lotofácil</option>
+                </select>
+                <button id="sort-button">Sortear Números</button>
+            </div>
+            <div class="sorted-numbers" id="sorted-numbers"></div>
+        </div>
+
+        <div id="desdobramento" class="tab-content">
+            <h2>Desdobramento de Números</h2>
+            <div class="desdobramento-controls">
+                <label for="desdobramento-game-type">Jogo:</label>
+                <select id="desdobramento-game-type">
+                    <option value="mega-sena">Mega-Sena</option>
+                    <option value="quina">Quina</option>
+                    <option value="lotofacil">Lotofácil</option>
+                </select>
+
+                <label for="total-numbers">Total de Dezenas a Combinar:</label>
+                <input type="number" id="total-numbers" min="6" value="10">
+
+                <label for="num-games">Número de Jogos a Gerar:</label>
+                <input type="number" id="num-games" min="1" value="5">
+
+                <div class="input-method">
+                    <input type="radio" id="random-input" name="input-method" value="random" checked>
+                    <label for="random-input">Gerar Aleatoriamente</label>
+                    <input type="radio" id="manual-input" name="input-method" value="manual">
+                    <label for="manual-input">Inserir Manualmente (separados por vírgula)</label>
+                </div>
+
+                <textarea id="manual-numbers" placeholder="Ex: 01,02,03..." style="display: none;"></textarea>
+                <button id="generate-combinations">Gerar Combinações</button>
+            </div>
+            <div class="combinations-output" id="combinations-output"></div>
+        </div>
+
+        <div id="historico" class="tab-content">
+            <h2>Histórico</h2>
+            <div class="history-filter">
+                <label for="history-type">Tipo de Histórico:</label>
+                <select id="history-type">
+                    <option value="sorteios">Sorteios</option>
+                    <option value="desdobramentos">Desdobramentos</option>
+                </select>
+            </div>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
